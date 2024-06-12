@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreData
 
 struct ContentView: View {
+    
+    @StateObject var locationManager = LocationManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack(alignment: .bottomTrailing) {
+            Map(){
+                UserAnnotation()
+            }.mapControls {
+                MapUserLocationButton().mapControlVisibility(.visible)
+                MapPitchToggle()
+                MapCompass()
+                MapScaleView().mapControlVisibility(.hidden)
+            }
+            Button(action: {}, label: {
+                Image(systemName: "plus")
+                    .font(.title.weight(.semibold))
+                    .padding()
+                    .background(.white)
+                    .foregroundColor(.blue)
+                    .clipShape(Circle())
+                    .shadow(radius: 4, x: 0, y: 4)
+            }).padding()
         }
-        .padding()
     }
 }
 
