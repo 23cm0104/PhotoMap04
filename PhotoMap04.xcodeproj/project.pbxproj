@@ -14,6 +14,7 @@
 		7F2443A62C19C4A40054BDDE /* PhotoMap04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443A52C19C4A40054BDDE /* PhotoMap04Tests.swift */; };
 		7F2443B02C19C4A50054BDDE /* PhotoMap04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443AF2C19C4A50054BDDE /* PhotoMap04UITests.swift */; };
 		7F2443B22C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443B12C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift */; };
+		7F2443C02C19C58A0054BDDE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		7F2443AB2C19C4A40054BDDE /* PhotoMap04UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoMap04UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2443AF2C19C4A50054BDDE /* PhotoMap04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMap04UITests.swift; sourceTree = "<group>"; };
 		7F2443B12C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMap04UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F2443BF2C19C58A0054BDDE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				7F2443942C19C4A30054BDDE /* PhotoMap04App.swift */,
 				7F2443962C19C4A30054BDDE /* ContentView.swift */,
+				7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */,
 				7F2443982C19C4A40054BDDE /* Assets.xcassets */,
 				7F24439A2C19C4A40054BDDE /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2443C02C19C58A0054BDDE /* DataModel.xcdatamodeld in Sources */,
 				7F2443972C19C4A30054BDDE /* ContentView.swift in Sources */,
 				7F2443952C19C4A30054BDDE /* PhotoMap04App.swift in Sources */,
 			);
@@ -584,6 +588,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F2443BF2C19C58A0054BDDE /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 7F2443BF2C19C58A0054BDDE /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7F2443892C19C4A30054BDDE /* Project object */;
 }
