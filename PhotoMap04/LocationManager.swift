@@ -9,11 +9,9 @@ import MapKit
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
-    
     @Published var region = MKCoordinateRegion()
     @Published var currentLocation: CLLocation?
     @Published var route: MKRoute?
-    
     override init() {
         super.init()
         manager.delegate = self
@@ -41,7 +39,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func getRoute(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D, transportType: MKDirectionsTransportType) {
         let sourceMark = MKPlacemark(coordinate: from)
         let destinationMark = MKPlacemark(coordinate: to)
-        
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: sourceMark)
         request.destination = MKMapItem(placemark: destinationMark)

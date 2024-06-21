@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F22AE002C2146230070F99A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22ADFF2C2146230070F99A /* Address.swift */; };
+		7F22AE022C2146390070F99A /* AddressFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22AE012C2146390070F99A /* AddressFetcher.swift */; };
+		7F22AE042C215B590070F99A /* ItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22AE032C215B590070F99A /* ItemInfoView.swift */; };
 		7F2443952C19C4A30054BDDE /* PhotoMap04App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443942C19C4A30054BDDE /* PhotoMap04App.swift */; };
 		7F2443972C19C4A30054BDDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443962C19C4A30054BDDE /* ContentView.swift */; };
 		7F2443992C19C4A40054BDDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2443982C19C4A40054BDDE /* Assets.xcassets */; };
@@ -15,9 +18,14 @@
 		7F2443B02C19C4A50054BDDE /* PhotoMap04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443AF2C19C4A50054BDDE /* PhotoMap04UITests.swift */; };
 		7F2443B22C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443B12C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift */; };
 		7F2443C02C19C58A0054BDDE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */; };
-		7F2443CA2C19D0240054BDDE /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443C82C19D0240054BDDE /* Item+CoreDataClass.swift */; };
-		7F2443CB2C19D0240054BDDE /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443C92C19D0240054BDDE /* Item+CoreDataProperties.swift */; };
 		7F2443CD2C19D0990054BDDE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443CC2C19D0990054BDDE /* LocationManager.swift */; };
+		7F2443D02C19D83C0054BDDE /* AddMarkerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2443CF2C19D83C0054BDDE /* AddMarkerItemView.swift */; };
+		7F5C58C22C1DF72700443F58 /* MarkerItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58C02C1DF72700443F58 /* MarkerItem+CoreDataClass.swift */; };
+		7F5C58C32C1DF72700443F58 /* MarkerItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58C12C1DF72700443F58 /* MarkerItem+CoreDataProperties.swift */; };
+		7F5C58C52C1DFADD00443F58 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58C42C1DFADD00443F58 /* Persistence.swift */; };
+		7F5C58C72C1E027100443F58 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58C62C1E027100443F58 /* ImagePickerView.swift */; };
+		7F5C58C92C1E0A4C00443F58 /* EditMarkerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58C82C1E0A4C00443F58 /* EditMarkerItemView.swift */; };
+		7F5C58CB2C1E117800443F58 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C58CA2C1E117800443F58 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F22ADFF2C2146230070F99A /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		7F22AE012C2146390070F99A /* AddressFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFetcher.swift; sourceTree = "<group>"; };
+		7F22AE032C215B590070F99A /* ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoView.swift; sourceTree = "<group>"; };
 		7F2443912C19C4A30054BDDE /* PhotoMap04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoMap04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2443942C19C4A30054BDDE /* PhotoMap04App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMap04App.swift; sourceTree = "<group>"; };
 		7F2443962C19C4A30054BDDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,10 +60,15 @@
 		7F2443AF2C19C4A50054BDDE /* PhotoMap04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMap04UITests.swift; sourceTree = "<group>"; };
 		7F2443B12C19C4A50054BDDE /* PhotoMap04UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMap04UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F2443BF2C19C58A0054BDDE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		7F2443C82C19D0240054BDDE /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7F2443C92C19D0240054BDDE /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7F2443CC2C19D0990054BDDE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7F2443CE2C19D2170054BDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7F2443CF2C19D83C0054BDDE /* AddMarkerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerItemView.swift; sourceTree = "<group>"; };
+		7F5C58C02C1DF72700443F58 /* MarkerItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkerItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7F5C58C12C1DF72700443F58 /* MarkerItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkerItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7F5C58C42C1DFADD00443F58 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7F5C58C62C1E027100443F58 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		7F5C58C82C1E0A4C00443F58 /* EditMarkerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMarkerItemView.swift; sourceTree = "<group>"; };
+		7F5C58CA2C1E117800443F58 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +99,8 @@
 		7F2443882C19C4A30054BDDE = {
 			isa = PBXGroup;
 			children = (
-				7F2443C82C19D0240054BDDE /* Item+CoreDataClass.swift */,
-				7F2443C92C19D0240054BDDE /* Item+CoreDataProperties.swift */,
+				7F5C58C02C1DF72700443F58 /* MarkerItem+CoreDataClass.swift */,
+				7F5C58C12C1DF72700443F58 /* MarkerItem+CoreDataProperties.swift */,
 				7F2443932C19C4A30054BDDE /* PhotoMap04 */,
 				7F2443A42C19C4A40054BDDE /* PhotoMap04Tests */,
 				7F2443AE2C19C4A50054BDDE /* PhotoMap04UITests */,
@@ -105,12 +121,20 @@
 		7F2443932C19C4A30054BDDE /* PhotoMap04 */ = {
 			isa = PBXGroup;
 			children = (
-				7F2443CE2C19D2170054BDDE /* Info.plist */,
 				7F2443942C19C4A30054BDDE /* PhotoMap04App.swift */,
-				7F2443962C19C4A30054BDDE /* ContentView.swift */,
+				7F22ADFF2C2146230070F99A /* Address.swift */,
+				7F22AE012C2146390070F99A /* AddressFetcher.swift */,
 				7F2443CC2C19D0990054BDDE /* LocationManager.swift */,
-				7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */,
+				7F5C58C42C1DFADD00443F58 /* Persistence.swift */,
+				7F2443962C19C4A30054BDDE /* ContentView.swift */,
+				7F2443CF2C19D83C0054BDDE /* AddMarkerItemView.swift */,
+				7F5C58C82C1E0A4C00443F58 /* EditMarkerItemView.swift */,
+				7F5C58C62C1E027100443F58 /* ImagePickerView.swift */,
+				7F5C58CA2C1E117800443F58 /* ListView.swift */,
+				7F22AE032C215B590070F99A /* ItemInfoView.swift */,
 				7F2443982C19C4A40054BDDE /* Assets.xcassets */,
+				7F2443BE2C19C58A0054BDDE /* DataModel.xcdatamodeld */,
+				7F2443CE2C19D2170054BDDE /* Info.plist */,
 				7F24439A2C19C4A40054BDDE /* Preview Content */,
 			);
 			path = PhotoMap04;
@@ -271,10 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F2443CA2C19D0240054BDDE /* Item+CoreDataClass.swift in Sources */,
-				7F2443CB2C19D0240054BDDE /* Item+CoreDataProperties.swift in Sources */,
+				7F5C58C92C1E0A4C00443F58 /* EditMarkerItemView.swift in Sources */,
+				7F5C58C52C1DFADD00443F58 /* Persistence.swift in Sources */,
+				7F22AE042C215B590070F99A /* ItemInfoView.swift in Sources */,
+				7F22AE002C2146230070F99A /* Address.swift in Sources */,
+				7F2443D02C19D83C0054BDDE /* AddMarkerItemView.swift in Sources */,
 				7F2443CD2C19D0990054BDDE /* LocationManager.swift in Sources */,
+				7F22AE022C2146390070F99A /* AddressFetcher.swift in Sources */,
+				7F5C58C72C1E027100443F58 /* ImagePickerView.swift in Sources */,
 				7F2443C02C19C58A0054BDDE /* DataModel.xcdatamodeld in Sources */,
+				7F5C58C22C1DF72700443F58 /* MarkerItem+CoreDataClass.swift in Sources */,
+				7F5C58CB2C1E117800443F58 /* ListView.swift in Sources */,
+				7F5C58C32C1DF72700443F58 /* MarkerItem+CoreDataProperties.swift in Sources */,
 				7F2443972C19C4A30054BDDE /* ContentView.swift in Sources */,
 				7F2443952C19C4A30054BDDE /* PhotoMap04App.swift in Sources */,
 			);
@@ -453,7 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +520,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

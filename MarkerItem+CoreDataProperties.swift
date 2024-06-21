@@ -1,8 +1,8 @@
 //
-//  Item+CoreDataProperties.swift
+//  MarkerItem+CoreDataProperties.swift
 //  PhotoMap04
 //
-//  Created by cmStudent on 2024/06/12.
+//  Created by cmStudent on 2024/06/16.
 //
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Item {
+extension MarkerItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Item> {
-        return NSFetchRequest<Item>(entityName: "Item")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<MarkerItem> {
+        return NSFetchRequest<MarkerItem>(entityName: "MarkerItem")
     }
 
     @NSManaged public var address: String?
@@ -24,10 +24,13 @@ extension Item {
     @NSManaged public var longitude: Double
     @NSManaged public var title: String?
     @NSManaged public var updateTime: Date?
+    @NSManaged public var red: Float
+    @NSManaged public var green: Float
+    @NSManaged public var blue: Float
 
 }
 
-extension Item : Identifiable {
+extension MarkerItem : Identifiable {
     public var stringUpdatedTime: String {dateFormatter(date: updateTime ?? Date())}
     
     func dateFormatter(date: Date) -> String {
