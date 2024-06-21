@@ -1,10 +1,3 @@
-//
-//  ListView.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/16.
-//
-
 import SwiftUI
 
 struct ListView: View {
@@ -60,8 +53,4 @@ struct ListView: View {
             }
         }
     }
-}
-
-#Preview {
-    ListView()
 }

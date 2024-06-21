@@ -1,10 +1,3 @@
-//
-//  Persistence.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/16.
-//
-
 import CoreData
 import UIKit
 
@@ -30,7 +23,6 @@ struct PersistenceController {
             newItem.red = 0
             newItem.green = 0
             newItem.blue = 0
-            
         }
         do {
             try viewContext.save()

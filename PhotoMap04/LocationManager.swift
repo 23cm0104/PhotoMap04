@@ -1,10 +1,3 @@
-//
-//  LocationManager.swift
-//  IOS202map_04
-//
-//  Created by cmStudent on 2024/05/28.
-//
-
 import MapKit
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {

@@ -1,10 +1,3 @@
-//
-//  EditMarkerItemView.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/16.
-//
-
 import SwiftUI
 import PhotosUI
 
@@ -122,5 +115,4 @@ struct EditMarkerItemView: View {
             }
         }
     }
-    
 }

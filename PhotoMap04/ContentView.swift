@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/12.
-//
-
 import SwiftUI
 import MapKit
 import CoreData
@@ -42,10 +35,8 @@ struct ContentView: View {
                                         setPostion(latitude: item.latitude, longitude: item.longitude)
                                         selectedAnnotation = item
                                     }
-                                
                             }
                         }
-                        
                     }
                 }
                 .mapControls {

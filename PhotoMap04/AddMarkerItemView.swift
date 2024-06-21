@@ -1,10 +1,3 @@
-//
-//  AddItemView.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/12.
-//
-
 import SwiftUI
 import PhotosUI
 
@@ -125,8 +118,4 @@ struct AddMarkerItemView: View {
             }
         }
     }
-}
-
-#Preview {
-    AddMarkerItemView()
 }

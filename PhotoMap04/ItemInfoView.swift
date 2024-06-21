@@ -1,10 +1,3 @@
-//
-//  ItemInfoView.swift
-//  PhotoMap04
-//
-//  Created by cmStudent on 2024/06/18.
-//
-
 import SwiftUI
 
 struct ItemInfoView: View {
