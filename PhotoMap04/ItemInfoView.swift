@@ -8,6 +8,7 @@ struct ItemInfoView: View {
     @State var red: Float
     @State var green: Float
     @State var blue: Float
+    @State var love: Int
     
     var body: some View {
         ZStack{
@@ -20,6 +21,15 @@ struct ItemInfoView: View {
                     .padding()
                 Text("タイトル: \(title ?? "")").font(.title).padding()
                 Text("コメント: \(comment ?? "")").font(.body)
+                HStack{
+                    ForEach( 0 ..<  love, id: \.self) { _ in
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(Color.red)
+                            .font(.title)
+                            .padding()
+                    }
+                }
+                
             }
             VStack{
                 HStack{

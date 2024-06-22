@@ -23,6 +23,7 @@ struct PersistenceController {
             newItem.red = 0
             newItem.green = 0
             newItem.blue = 0
+            newItem.love = 0
         }
         do {
             try viewContext.save()

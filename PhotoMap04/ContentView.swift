@@ -45,7 +45,7 @@ struct ContentView: View {
                     MapCompass()
                     MapScaleView().mapControlVisibility(.hidden)
                         .sheet(item: $selectedAnnotation){ item in
-                            ItemInfoView(address: item.address, imageData: item.imageData , comment: item.comment, title: item.title ,red: item.red, green:  item.green, blue:  item.blue).presentationDetents([.medium, .large]).presentationDragIndicator(.hidden)
+                            ItemInfoView(address: item.address, imageData: item.imageData , comment: item.comment, title: item.title ,red: item.red, green:  item.green, blue:  item.blue, love: item.love).presentationDetents([.medium, .large]).presentationDragIndicator(.hidden)
                         }
                 }
                 VStack{

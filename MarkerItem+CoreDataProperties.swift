@@ -27,6 +27,7 @@ extension MarkerItem {
     @NSManaged public var red: Float
     @NSManaged public var green: Float
     @NSManaged public var blue: Float
+    @NSManaged public var love: Int
 
 }
 

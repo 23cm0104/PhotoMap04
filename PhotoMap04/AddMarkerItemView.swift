@@ -12,67 +12,102 @@ struct AddMarkerItemView: View {
     @State private var title = ""
     @State private var comment = ""
     @State private var imageData: Data = Data()
-    @State var selectedItem: PhotosPickerItem?
+    @State private var selectedItem: PhotosPickerItem?
     @State private var uiImage: UIImage?
     @State private var markerColor = Color.blue
+    
+    @State var rating: Int = 0
+    var label = ""
+    var maximumRating = 5
+    
+    var offImage: Image?
+    var onImage = Image(systemName: "heart.fill")
+    
+    var offColor = Color.gray
+    var onColor = Color.red
+    
     var longitude: Double {
         locationManager.currentLocation?.coordinate.longitude ?? 0
     }
     var latitude: Double {
         locationManager.currentLocation?.coordinate.latitude ?? 0
     }
+    func image(for number: Int) -> Image {
+        if number > rating {
+            offImage ?? onImage
+        } else {
+            onImage
+        }
+    }
     var body: some View {
-        NavigationStack{
-            VStack {
-                TextField("タイトル", text: $title)
-                    .font(.title)
-                    .border(.black)
-                TextEditor(text: $comment)
-                    .font(.body)
-                    .border(.black)
-                ColorPicker("マーク色", selection: $markerColor)
-                HStack {
-                    if let uiImage = uiImage {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .border(.black)
-                    } else {
-                        Image("noimage")
-                            .resizable()
-                            .frame(height: 200)
-                            .aspectRatio(contentMode: .fit)
-                            .border(.black)
-                    }
-                    Spacer()
-                    PhotosPicker(selection: $selectedItem) {
-                        Image(systemName: "photo.artframe.circle")
-                            .font(.system(size: 50))
-                    }
-                    .onChange(of: selectedItem) { oldItem, newItem in
-                        Task {
-                            guard let data = try? await newItem?.loadTransferable(type: Data.self) else { return }
-                            guard let uiImage = UIImage(data: data) else { return }
-                            imageData = data
-                            self.uiImage = uiImage
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("タイトル", text: $title).font(.title)
+                    TextEditor(text: $comment).font(.body).frame(height: 100)
+                    ColorPicker("マーク色", selection: $markerColor)
+                    HStack {
+                        if label.isEmpty == false {
+                            Text(label)
+                        }
+                        ForEach(1..<maximumRating + 1, id: \.self) { number in
+                            Button {
+                                rating = number
+                            } label: {
+                                image(for: number)
+                                    .foregroundStyle(number > rating ? offColor : onColor)
+                                    .font(.title)
+                            }
+                        }
+                    }.buttonStyle(.plain)
+                }
+                Section {
+                    HStack {
+                        if let uiImage = uiImage {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } else {
+                            Image("noimage")
+                                .resizable()
+                                .frame(height: 200)
+                                .aspectRatio(contentMode: .fit)
+                        }
+                        Spacer()
+                        VStack {
+                            PhotosPicker(selection: $selectedItem) {
+                                Image(systemName: "photo.artframe.circle")
+                                    .font(.system(size: 50))
+                            }
+                            .onChange(of: selectedItem) { oldItem, newItem in
+                                Task {
+                                    guard let data = try? await newItem?.loadTransferable(type: Data.self) else { return }
+                                    guard let uiImage = UIImage(data: data) else { return }
+                                    imageData = data
+                                    self.uiImage = uiImage
+                                }
+                            }
+                            .padding()
                         }
                     }
                 }
-                Button(action: {
-                    isShowSheet = true
-                }, label: {
-                    Text("カメラ")
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .multilineTextAlignment(.center)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                })
-                .sheet(isPresented: $isShowSheet) {
-                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $uiImage)
+                Section {
+                    HStack{
+                        Spacer()
+                        Button(action: {
+                            isShowSheet = true
+                        }, label: {
+                            Image(systemName: "camera").font(.system(size: 50))
+                        })
+                        .sheet(isPresented: $isShowSheet) {
+                            ImagePickerView(isShowSheet: $isShowSheet, captureImage: $uiImage)
+                        }
+                        .padding()
+                        Spacer()
+                    }
+                    
                 }
             }
-            .padding()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
@@ -108,6 +143,7 @@ struct AddMarkerItemView: View {
             newItem.red = Float(r)
             newItem.green = Float(g)
             newItem.blue = Float(b)
+            newItem.love = rating
             do {
                 try viewContext.save()
             } catch {
