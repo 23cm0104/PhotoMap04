@@ -23,7 +23,7 @@ struct ContentView: View {
                     UserAnnotation()
                     ForEach(items) { item in
                         Annotation("\(item.title ?? "")\n\(item.address ?? "")", coordinate: CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)) {
-                            VStack{
+                            VStack {
                                 Image(systemName: "star.circle.fill")
                                     .foregroundColor(Color(.sRGB, red: Double(item.red), green: Double(item.green), blue: Double(item.blue)))
                                     .font(.system(size: 20))
